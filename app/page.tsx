@@ -42,18 +42,15 @@ export default function HomePage() {
     }}>
       <div style={{ maxWidth: 900, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h1 style={{
-            fontSize: '3rem',
-            fontWeight: 800,
-            color: '#0f172a',
-            margin: '0 0 1rem 0',
-            background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
-            BharatApps
-          </h1>
+          <img 
+            src="/bharatapps.png" 
+            alt="BharatApps" 
+            style={{
+              maxWidth: '300px',
+              height: 'auto',
+              marginBottom: '1rem'
+            }}
+          />
           <p style={{
             fontSize: '1.25rem',
             color: '#64748b',
@@ -70,7 +67,8 @@ export default function HomePage() {
           borderRadius: '1rem',
           padding: '2rem',
           marginBottom: '3rem',
-          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.08)'
+          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.08)',
+          textAlign: 'center'
         }}>
           <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>
             🔍 Find Indian Alternative
@@ -135,7 +133,7 @@ export default function HomePage() {
                       {uniqueApps.map(app => (
                         <Link
                           key={app.slug}
-                          href={`/app/${app.slug}`}
+                          href={`/app/${app.slug}?from=home`}
                           style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -239,6 +237,26 @@ export default function HomePage() {
               <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0.5rem 0 0 0' }}>Teams understand local needs</p>
             </div>
           </div>
+        </div>
+
+        {/* Footer Section */}
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.7)',
+          borderRadius: '0.75rem',
+          border: '1px solid #e2e8f0',
+          padding: '2.5rem',
+          marginTop: '3rem',
+          textAlign: 'center'
+        }}>
+          <p style={{ color: '#0f172a', fontSize: '1rem', margin: '0 0 1rem 0', fontWeight: 600 }}>
+            🇮🇳 This initiative supports <strong>Aatmanirbhar Bharat</strong> and <strong>Swadeshi</strong> ideologies
+          </p>
+          <p style={{ color: '#64748b', fontSize: '0.95rem', margin: 0, lineHeight: 1.6 }}>
+            Made with ❤️ for <strong>Viksit Bharat Buildathon 2025</strong>
+          </p>
+          <p style={{ color: '#94a3b8', fontSize: '0.85rem', margin: '1rem 0 0 0' }}>
+            Empowering India's tech ecosystem, one app at a time
+          </p>
         </div>
       </div>
     </main>

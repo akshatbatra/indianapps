@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { apps } from '@/app/data/apps';
 import styles from '@/app/app-details.module.css';
 
@@ -8,17 +12,24 @@ interface PageProps {
   }>;
 }
 
-export async function generateStaticParams() {
-  return apps.map(app => ({
-    slug: app.slug,
-  }));
-}
+export default function AppDetailsPage({ params: paramsPromise }: PageProps) {
+  const searchParams = useSearchParams();
+  const [params, setParams] = useState<{ slug: string } | null>(null);
+  const [app, setApp] = useState<typeof apps[0] | null>(null);
 
-export default async function AppDetailsPage({ params }: PageProps) {
-  const resolvedParams = await params;
-  const app = apps.find(a => a.slug === resolvedParams.slug);
+  useEffect(() => {
+    // Get params from promise
+    paramsPromise.then(p => {
+      setParams(p);
+      const foundApp = apps.find(a => a.slug === p.slug);
+      setApp(foundApp || null);
+    });
+  }, [paramsPromise]);
 
-  if (!app) {
+  // Check if coming from home (via query param)
+  const fromHome = searchParams.get('from') === 'home';
+
+  if (!params || !app) {
     return (
       <main className={styles.main}>
         <div className={styles.notFound}>
@@ -32,11 +43,21 @@ export default async function AppDetailsPage({ params }: PageProps) {
     );
   }
 
+  const backLink = fromHome ? '/' : '/listing';
+  const backText = fromHome ? '← Back to Home' : '← Back to Listing';
+
   return (
     <main className={styles.main}>
-      <Link href="/listing" className={styles.backLink}>
-        ← Back to Listing
-      </Link>
+      <div className={styles.topNav}>
+        {!fromHome && (
+          <Link href="/" className={styles.homeButton}>
+            🏠 Home
+          </Link>
+        )}
+        <Link href={backLink} className={styles.backLink}>
+          {backText}
+        </Link>
+      </div>
 
       <div className={styles.header}>
         <div className={styles.imageSection}>

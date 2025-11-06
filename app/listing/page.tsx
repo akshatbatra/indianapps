@@ -19,8 +19,11 @@ export default function ListingPage() {
 
   return (
     <main className={styles.main}>
+      <Link href="/" className={styles.homeButton}>
+        🏠 Home
+      </Link>
       <div className={styles.header}>
-        <h1>Indian Apps & Their Alternatives</h1>
+        <h1>Indian Apps</h1>
         <p>Discover Indian software alternatives to popular foreign apps</p>
       </div>
 

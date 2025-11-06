@@ -2015,8 +2015,8 @@ export const apps = [
     "description_long": "Gaana.com- Listen & Download latest MP3 songs online. Download new or old Hindi songs, Bollywood songs, English songs* & more on Gaana+ and play offline. Create, share and listen to streaming music playlists."
   },
   {
-    "name": "Hotstar",
-    "slug": "hotstar",
+    "name": "JioHotstar",
+    "slug": "JioStar",
     "description": "India's largest streaming platform combining Disney+ Hotstar and JioCinema content with movies, TV shows, sports, and originals",
     "category": "entertainment",
     "website": "https://www.jiostar.com/",
@@ -2028,7 +2028,7 @@ export const apps = [
     "pricing": "Freemium",
     "company": "JioStar (Reliance-Disney JV)",
     "location": "Mumbai",
-    "image": "https://cdn.jiostar.com/jiostar/wp-content/uploads/2025/08/JioStar-Logo.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JioHotstar_2025.png/960px-JioHotstar_2025.png?20250530065522",
     "description_long": "JioStar combines the power of Reliance\u2019s Viacom18 and Disney Star, delivering unmatched entertainment with 120+ TV channels and two leading streaming platforms. Explore a new era of content with JioStar."
   },
   {
@@ -2114,7 +2114,7 @@ export const apps = [
     "pricing": "Freemium",
     "company": "MX Media (Times Internet)",
     "location": "Mumbai",
-    "image": "https://assets-6.mxplay.com/static/mxoneweb/desktop/images/logo-dark.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/MX_Player_Logo.png/960px-MX_Player_Logo.png?20191226180401",
     "description_long": "Amazon MX Player is India's Most Premium OTT Service Where You Can Watch Old & New Movies, Popular Web Series, Comedy TV Shows, Stand-up Comedians Videos, latest International Dramas in English, Hindi, Telugu, Tamil, Kannada, and more Languages."
   },
   {
@@ -2654,7 +2654,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Moving Tech",
     "location": "Bangalore",
-    "image": "/WebsiteIcon.svg",
+    "image": "https://pbs.twimg.com/profile_images/1639171918610980864/7m3AfQop_400x400.jpg",
     "description_long": "Book a ride with Zero Commission | 100% Open Source"
   },
   {

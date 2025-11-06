@@ -63,7 +63,7 @@ export const apps = [
     "pricing": "Freemium",
     "company": "Ginger Software (Indian operations)",
     "location": "Bangalore",
-    "image": "",
+    "image": "https://www.gingersoftware.com/statics/2.5.55/images/pages/footer/ginger-light-logo.svg",
     "description_long": ""
   },
   {
@@ -97,7 +97,7 @@ export const apps = [
     "pricing": "Paid",
     "company": "Helpwise",
     "location": "Delhi",
-    "image": "",
+    "image": "https://cdn.helpwise.io/landingv3/svg/hwlogobyjc.webp",
     "description_long": "Customer service platform for SMBs to help you serve customers faster and retain them better. Helpwise empowers agents to serve customers not tickets."
   },
   {
@@ -164,8 +164,8 @@ export const apps = [
     "pricing": "Paid",
     "company": "MoEngage Inc",
     "location": "Bangalore",
-    "image": "",
-    "description_long": "Execute your cross channel marketing strategy with MoEngage\u2019s insights-led customer engagement platform. Leverage the power of personalization with MoEngage."
+    "image": "https://www.moengage.com/wp-content/uploads/moengage-logo-dark-1A1A1A.svg",
+    "description_long": "Execute your cross channel marketing strategy with MoEngage's insights-led customer engagement platform. Leverage the power of personalization with MoEngage."
   },
   {
     "name": "NotifyVisitors",
@@ -232,7 +232,7 @@ export const apps = [
     "pricing": "Paid",
     "company": "ProofHub",
     "location": "Delhi",
-    "image": "",
+    "image": "https://www.proofhub.com/wp-content/themes/ph5.2/images/home/ph-logo.svg?12",
     "description_long": "ProofHub is an easy-to-use project management software with everything you need to manage teams, work, and projects from a central location. No per user fee. Free trial."
   },
   {
@@ -302,7 +302,7 @@ export const apps = [
     "pricing": "Freemium",
     "company": "Topmate",
     "location": "Bangalore",
-    "image": "https://topmate.io/meta_referral_image.png",
+    "image": "https://topmate.io/cdn-cgi/image/width=256,quality=90/images/common/topmate-light.svg",
     "description_long": "Make money from your content. Sell products, host sessions, and grow your business \u2014 all from a single link."
   },
   {
@@ -336,7 +336,7 @@ export const apps = [
     "pricing": "Freemium",
     "company": "Truelancer",
     "location": "India",
-    "image": "",
+    "image": "https://static.truelancer.com/truelancer-logo-dark-background_small.png",
     "description_long": "Hire Freelancers & Find Freelance Jobs Online. Hire Freelancers in India, USA, UK, Bangladesh, Philippines. Hire Skilled Professionals, Consultants, Contractors"
   },
   {
@@ -909,7 +909,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Chatwoot Inc.",
     "location": "San Francisco, USA (Indian Founded)",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/chatwoot/chatwoot/ba8df900e3092d5a57c52613f302c9507c7e96ae/public/brand-assets/logo.svg",
     "description_long": ""
   },
   {
@@ -926,7 +926,7 @@ export const apps = [
     "pricing": "Paid",
     "company": "Exotel Techcom",
     "location": "Bangalore",
-    "image": "",
+    "image": "https://exotel.com/wp-content/themes/exotel/img/exo-black.png",
     "description_long": "AI transformation partner for enterprises, driving increased revenue, reduced costs, and enhanced customer experience with Exotel solutions."
   },
   {
@@ -943,7 +943,7 @@ export const apps = [
     "pricing": "Paid",
     "company": "Haptik (Jio)",
     "location": "Mumbai",
-    "image": "",
+    "image": "https://www.haptik.ai/hs-fs/hubfs/Business%20Blog/Haptik%20Reborn/Logo-Horizontal-copy-1.png?width=336&name=Logo-Horizontal-copy-1.png",
     "description_long": "Get started with building enterprise-grade, custom Conversational AI Agents powered by Jio Haptik's No/Low-Code Builder for easy deployment at scale."
   },
   {
@@ -960,7 +960,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Jio Platforms",
     "location": "Mumbai",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/JioMeet_text_logo.svg/112px-JioMeet_text_logo.svg.png?20200708073248",
     "description_long": ""
   },
   {
@@ -1304,7 +1304,7 @@ export const apps = [
     "pricing": "Paid",
     "company": "BrowserStack Inc",
     "location": "Mumbai",
-    "image": "",
+    "image": "https://browserstack.wpenginepowered.com/wp-content/uploads/2025/01/Hear-BrowserStacks-founding-story.png",
     "description_long": "Instant access to 3000+ browsers and real iOS and Android devices for cross browser testing. Ship apps and websites that work for everyone, every time. Get Free Trial."
   },
   {
@@ -1390,7 +1390,7 @@ export const apps = [
     "pricing": "Freemium",
     "company": "Ola Krutrim",
     "location": "Bengaluru, India",
-    "image": "",
+    "image": "https://cdn.olakrutrim.com/olakrutrim/comman/krutrim-logo.svg",
     "description_long": ""
   },
   {
@@ -1408,7 +1408,7 @@ export const apps = [
     "pricing": "Paid",
     "company": "Ola Krutrim",
     "location": "Bengaluru, India",
-    "image": "",
+    "image": "https://cdn.olakrutrim.com/olakrutrim/comman/krutrim-logo.svg",
     "description_long": ""
   },
   {
@@ -1618,7 +1618,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Tata Digital",
     "location": "Bengaluru, Karnataka",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/BigBasket_Logo.svg/250px-BigBasket_Logo.svg.png",
     "description_long": ""
   },
   {
@@ -1684,7 +1684,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Reliance Industries",
     "location": "Mumbai, Maharashtra",
-    "image": "https://www.jiomart.com/assets/global/logo-fb.png",
+    "image": "https://relianceretail.com/img/brands/larg/jio-mart-logo.jpg",
     "description_long": "India's online shopping destination for Mobiles, Electronics, Grocery, Fashion, Home & Kitchen, Furniture, Jewellery, Beauty, and more. Great Offers. Low Prices. Easy Returns. Pay on Delivery. Top Brands."
   },
   {
@@ -1700,7 +1700,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Meesho",
     "location": "Bengaluru, Karnataka",
-    "image": "",
+    "image": "https://www.meesho.com/assets/svgicons/meeshoLogo.svg",
     "description_long": ""
   },
   {
@@ -1717,7 +1717,7 @@ export const apps = [
     "pricing": "Free",
     "company": "FSN E-Commerce Ventures",
     "location": "Mumbai, Maharashtra",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Nykaa_New_Logo.svg/960px-Nykaa_New_Logo.svg.png?20240108192531",
     "description_long": ""
   },
   {
@@ -1733,7 +1733,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Pepperfry",
     "location": "Mumbai, Maharashtra",
-    "image": "",
+    "image": "https://ii1.pepperfry.com/assets/w38-pf-logo-desktop.svg",
     "description_long": ""
   },
   {
@@ -1784,7 +1784,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Clues Network",
     "location": "Gurugram, Haryana",
-    "image": "",
+    "image": "https://cdn.shopclues.net/images/banners/offers/pd/brand_guidelines/shoplcues-logo.png",
     "description_long": "Online shopping site in India - Buy mobiles, electronics, laptops, home appliances, fashion, shoes, home & kitchen products at the lowest prices from Shopclues.com. Easy Return & Replacement Policy!"
   },
   {
@@ -1801,7 +1801,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Snapdeal Limited",
     "location": "New Delhi",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Snapdeal_new_official_logo.png/960px-Snapdeal_new_official_logo.png?20210415032044",
     "description_long": ""
   },
   {
@@ -1979,7 +1979,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Bigtree Entertainment",
     "location": "Mumbai, Maharashtra",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Bookmyshow-logoid.png?20210709154756",
     "description_long": ""
   },
   {
@@ -2081,7 +2081,7 @@ export const apps = [
     "pricing": "Free",
     "company": "VerSe Innovation (Dailyhunt)",
     "location": "Bangalore, Karnataka",
-    "image": "",
+    "image": "https://myjosh.in/images_new/logo.svg",
     "description_long": ""
   },
   {
@@ -2179,7 +2179,7 @@ export const apps = [
     "pricing": "Free",
     "company": "National Payments Corporation of India",
     "location": "Mumbai, Maharashtra",
-    "image": "",
+    "image": "https://www.bhimupi.org.in/images/bhim/logo.png",
     "description_long": ""
   },
   {
@@ -2670,7 +2670,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Roppen Transportation Services Pvt Ltd",
     "location": "Bangalore",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e7/Rapido-logo.png?20191127170906",
     "description_long": ""
   },
   {
@@ -2702,7 +2702,7 @@ export const apps = [
     "pricing": "Free",
     "company": "Hidden Reflex",
     "location": "Bangalore",
-    "image": "",
+    "image": "https://epicbrowser.com/assets/img/epic_logo_black.png",
     "description_long": "Epic is a private, secure web browser that blocks ads, trackers, fingerprinting, cryptomining, ultrasound signaling and more."
   },
   {

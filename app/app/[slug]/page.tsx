@@ -1,17 +1,22 @@
-'use client';
-
 import Link from 'next/link';
 import { apps } from '@/app/data/apps';
 import styles from '@/app/app-details.module.css';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function AppDetailsPage({ params }: PageProps) {
-  const app = apps.find(a => a.slug === params.slug);
+export async function generateStaticParams() {
+  return apps.map(app => ({
+    slug: app.slug,
+  }));
+}
+
+export default async function AppDetailsPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const app = apps.find(a => a.slug === resolvedParams.slug);
 
   if (!app) {
     return (

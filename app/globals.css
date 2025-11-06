@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffe0cc 0%, #ffffff 50%, #ccf2cc 100%);
+  min-height: 100vh;
   color: #0f172a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

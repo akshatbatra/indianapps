@@ -5,53 +5,17 @@ import Link from 'next/link';
 import { apps } from '../data/apps';
 import styles from '../listing.module.css';
 
-// Map foreign apps to their Indian alternatives
-const foreignAppToIndianAlternatives: Record<string, typeof apps> = {};
-apps.forEach(app => {
-  app.alternatives.forEach(alt => {
-    const lowerAlt = alt.toLowerCase();
-    if (!foreignAppToIndianAlternatives[lowerAlt]) {
-      foreignAppToIndianAlternatives[lowerAlt] = [];
-    }
-    foreignAppToIndianAlternatives[lowerAlt].push(app);
-  });
-});
-
 export default function ListingPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedForeignApp, setSelectedForeignApp] = useState<string | null>(null);
-
-  // Get unique foreign apps from alternatives
-  const uniqueForeignApps = useMemo(() => {
-    const allAlternatives = new Set<string>();
-    apps.forEach(app => {
-      app.alternatives.forEach(alt => allAlternatives.add(alt.toLowerCase()));
-    });
-    return Array.from(allAlternatives).sort();
-  }, []);
-
-  // Filter apps based on search query
-  const filteredApps = useMemo(() => {
-    if (!selectedForeignApp) return apps;
-    const alternatives = foreignAppToIndianAlternatives[selectedForeignApp.toLowerCase()] || [];
-    return alternatives;
-  }, [selectedForeignApp]);
 
   // Filter by search query on name or description
   const searchFilteredApps = useMemo(() => {
-    if (!searchQuery) return filteredApps;
+    if (!searchQuery) return apps;
     const query = searchQuery.toLowerCase();
-    return filteredApps.filter(
+    return apps.filter(
       app => app.name.toLowerCase().includes(query) || app.description.toLowerCase().includes(query)
     );
-  }, [searchQuery, filteredApps]);
-
-  // Get suggestions for dropdown
-  const suggestions = useMemo(() => {
-    if (!searchQuery) return [];
-    const query = searchQuery.toLowerCase();
-    return uniqueForeignApps.filter(app => app.includes(query)).slice(0, 10);
-  }, [searchQuery, uniqueForeignApps]);
+  }, [searchQuery]);
 
   return (
     <main className={styles.main}>
@@ -64,39 +28,12 @@ export default function ListingPage() {
         <div className={styles.searchBox}>
           <input
             type="text"
-            placeholder="Search for a foreign app (e.g., Salesforce, Slack)..."
+            placeholder="Search Indian apps (e.g., Zoho, CleverTap, ERPNext)..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             className={styles.searchInput}
           />
-          {suggestions.length > 0 && (
-            <div className={styles.dropdown}>
-              {suggestions.map(suggestion => (
-                <div
-                  key={suggestion}
-                  className={styles.dropdownItem}
-                  onClick={() => {
-                    setSearchQuery('');
-                    setSelectedForeignApp(suggestion);
-                  }}
-                >
-                  {suggestion}
-                </div>
-              ))}
-            </div>
-          )}
         </div>
-        {selectedForeignApp && (
-          <div className={styles.filterTag}>
-            Showing alternatives for <strong>{selectedForeignApp}</strong>
-            <button
-              onClick={() => setSelectedForeignApp(null)}
-              className={styles.clearButton}
-            >
-              ✕
-            </button>
-          </div>
-        )}
       </div>
 
       <div className={styles.stats}>
@@ -105,12 +42,7 @@ export default function ListingPage() {
 
       {searchFilteredApps.length === 0 ? (
         <div className={styles.emptyState}>
-          <p>No apps found. Try a different search or browse all apps.</p>
-          {selectedForeignApp && (
-            <button onClick={() => setSelectedForeignApp(null)} className={styles.resetButton}>
-              View All Apps
-            </button>
-          )}
+          <p>No apps found. Try a different search.</p>
         </div>
       ) : (
         <div className={styles.appsGrid}>

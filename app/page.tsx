@@ -79,12 +79,13 @@ export default function HomePage() {
           <div style={{ position: 'relative' }}>
             <input
               type="text"
-              placeholder="e.g., Salesforce, Slack, Figma, HubSpot..."
+              placeholder="e.g., WhatsApp, Netflix, Chrome, Uber..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               style={{
                 width: '100%',
                 padding: '1rem',
+                paddingRight: '2.5rem',
                 fontSize: '1rem',
                 border: '2px solid #e2e8f0',
                 borderRadius: '0.5rem',
@@ -95,6 +96,29 @@ export default function HomePage() {
               onFocus={(e) => e.currentTarget.style.borderColor = '#2563eb'}
               onBlur={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
             />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                style={{
+                  position: 'absolute',
+                  right: '0.75rem',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '1.2rem',
+                  color: '#94a3b8',
+                  padding: '0.5rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#64748b'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                title="Clear search"
+              >
+                ✕
+              </button>
+            )}
             {showSuggestions && (
               <div style={{
                 position: 'absolute',
@@ -199,7 +223,9 @@ export default function HomePage() {
               e.currentTarget.style.boxShadow = '0 4px 15px rgba(37, 99, 235, 0.3)';
             }}
           >
-            📱 Browse All Indian Apps
+      <img src="https://flagcdn.com/16x12/in.png" 
+     width="16" 
+     height="12" /> &nbsp; Browse All Indian Apps
           </Link>
         </div>
 

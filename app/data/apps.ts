@@ -1,5 +1,22 @@
 export const apps = [
   {
+    "name": "Ola Cabs",
+    "slug": "ola-cabs",
+    "description": "Ride-hailing platform offering cabs, auto-rickshaws, bikes, and bus services across India with competitive fares",
+    "category": "travel",
+    "website": "https://www.olacabs.com/",
+    "alternatives": [
+      "Uber",
+      "Lyft",
+      "Grab"
+    ],
+    "pricing": "Free to Download",
+    "company": "Ola Electric Mobility",
+    "location": "Bangalore",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Ola_Cabs_logo.svg/534px-Ola_Cabs_logo.svg.png?20210518001051",
+    "description_long": "Book a ride with Ola - India's leading ride-hailing platform. Get safe, reliable, and affordable rides with just a tap. Ola Cabs offers multiple vehicle options including Ola Auto, Ola Bike, and Ola Bus services."
+  },
+  {
     "name": "CleverTap",
     "slug": "clevertap",
     "description": "Customer engagement and retention platform with analytics and personalization",
@@ -2826,3 +2843,4 @@ export const apps = [
     "description_long": "Zoho Vault is an online password manager that acts as a digital vault for your identities. Safely manage all your passwords & protect them from cyberthreats. Try for free. No credit card required."
   }
 ];
+

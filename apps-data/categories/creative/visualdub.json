@@ -1,0 +1,15 @@
+{
+  "name": "VisualDub",
+  "slug": "visualdub",
+  "description": "AI-powered video dubbing and localization platform for content creators and media companies",
+  "website": "https://visualdub.in/",
+  "category": "creative",
+  "alternatives": [
+    "Speechify",
+    "Murf",
+    "Descript"
+  ],
+  "pricing": "Paid",
+  "company": "VisualDub",
+  "location": "India"
+}

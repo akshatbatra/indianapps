@@ -1,0 +1,34 @@
+{
+  "name": "Zoho Learn",
+  "slug": "zoho-learn",
+  "description": "Knowledge management and learning management system with course creation, documentation, testing, certifications, analytics, and collaborative learning tools for employee training and onboarding",
+  "website": "https://www.zoho.com/learn/",
+  "category": "education",
+  "alternatives": [
+    "Confluence",
+    "Notion",
+    "Guru",
+    "Document360",
+    "Trainual"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/learn-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:36:03.496Z",
+    "title": "Knowledge Management and Training Software | Zoho Learn",
+    "description": "Zoho Learn is an all-in-one knowledge management and learning platform built to help your business capture and share knowledge, build online training programs, and measure training results.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/learn-logo.png",
+    "url": "https://www.zoho.com/learn/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Knowledge Management and Training Software | Zoho Learn",
+    "twitter_description": "Zoho Learn is an all-in-one knowledge management and learning platform built to help your business capture and share knowledge, build online training programs, and measure training results.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/learn-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://apps.apple.com/us/app/zoho-learn/id1590127933",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.learn"
+}

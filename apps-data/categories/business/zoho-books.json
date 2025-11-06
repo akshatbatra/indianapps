@@ -1,0 +1,28 @@
+{
+  "name": "Zoho Books",
+  "slug": "zoho-books",
+  "description": "Online accounting software for small businesses and freelancers",
+  "website": "https://www.zoho.com/books/",
+  "category": "business",
+  "alternatives": [
+    "QuickBooks",
+    "Xero",
+    "FreshBooks"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://ogimage.zohofinance.com/server/og_image_books_function?title=Online+Accounting+Software+for+India+%7C+Zoho+Books",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:36.864Z",
+    "title": "Online Accounting Software for India | Zoho Books",
+    "type": "website",
+    "url": "https://www.zoho.com/in/books/",
+    "image": "https://ogimage.zohofinance.com/server/og_image_books_function?title=Online+Accounting+Software+for+India+%7C+Zoho+Books",
+    "description": "Manage GST, invoicing, expenses & more with Zoho Books - India’s trusted online accounting software for small businesses & accountants.",
+    "twitter_card": "summary_large_image",
+    "twitter_site": "@ZohoBooks"
+  },
+  "appStoreUrl": "https://apps.apple.com/app/apple-store/id710446064?pt=423641&ct=website_top_bar_downloads&mt=8, https://apps.apple.com/app/apple-store/id710446064?pt=423641&ct=website_homePage&mt=8, https://apps.apple.com/app/apple-store/id710446064?pt=423641&ct=website_footerPage&mt=8, https://apps.apple.com/app/id710446064",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.books&referrer=utm_source%3Dwebsite%26utm_medium%3Dtop_bar_downloads, https://play.google.com/store/apps/details?id=com.zoho.books&referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage, https://play.google.com/store/apps/details?id=com.zoho.books&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter"
+}

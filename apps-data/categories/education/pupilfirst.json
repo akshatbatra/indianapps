@@ -1,0 +1,34 @@
+{
+  "name": "Pupilfirst",
+  "slug": "pupilfirst",
+  "description": "Learning management system empowering digital transformation of Indian classroom education",
+  "website": "https://www.pupilfirst.org",
+  "category": "education",
+  "alternatives": [
+    "Coursera",
+    "Canvas",
+    "Blackboard",
+    "Moodle"
+  ],
+  "pricing": "Freemium",
+  "company": "Pupilfirst Pvt. Ltd.",
+  "location": "Kochi, Kerala",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:36:01.170Z",
+    "title": "Pupilfirst is at the vanguard of the digital transformation of Indian classroom education.",
+    "description": "Pupilfirst is a set of tools to move beyond our traditional classrooms to the NEP 2020 Vision of Learner-Centered Classrooms.",
+    "url": "https://www.pupilfirst.com",
+    "type": "website",
+    "image": "/pf-og.jpg",
+    "image:alt": "Pupilfirst Adhyayana - Reimagining Indian Classroom Education with Illustration of NEP 2020 classroom.",
+    "site_name": "Pupilfirst",
+    "locale": "en_US",
+    "twitter_title": "Pupilfirst is at the vanguard of the digital transformation of Indian classroom education.",
+    "twitter_description": "Pupilfirst is a set of tools to move beyond our traditional classrooms to the NEP 2020 Vision of Learner-Centered Classrooms.",
+    "twitter_url": "https://www.pupilfirst.com",
+    "twitter_card": "summary",
+    "twitter_site": "@pupilfirstlms",
+    "twitter_image": "/pf-og.jpg",
+    "twitter_image:alt": "Pupilfirst Adhyayana - Reimagining Indian Classroom Education with Illustration of NEP 2020 classroom."
+  }
+}

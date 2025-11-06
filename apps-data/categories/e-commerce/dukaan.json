@@ -1,0 +1,30 @@
+{
+  "name": "Dukaan",
+  "slug": "dukaan",
+  "description": "DIY platform to create online stores and start selling online in 30 seconds",
+  "website": "https://mydukaan.io/",
+  "category": "e-commerce",
+  "alternatives": [
+    "Shopify",
+    "WooCommerce",
+    "BigCommerce"
+  ],
+  "pricing": "Freemium",
+  "company": "Dukaan",
+  "location": "Bangalore",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:35:25.009Z",
+    "image": "https://mydukaan.io/images/og-images/og-selling-online.jpg",
+    "image:type": "image/jpeg",
+    "twitter_card": "summary_large_image",
+    "twitter_title": "Dukaan - Enterprise Ecommerce Platform for Businesses",
+    "twitter_description": "Try Dukaan, the cutting-edge enterprise ecommerce platform. Seamlessly manage your online business and drive growth with our powerful tools.",
+    "twitter_site": "@mydukaanapp",
+    "twitter_creator": "@mydukaanapp",
+    "twitter_image:src": "https://mydukaan.io/images/og-images/og-selling-online.jpg",
+    "twitter_image": "https://mydukaan.io/images/og-images/og-selling-online.jpg",
+    "twitter_domain": "mydukaan.io"
+  },
+  "appStoreUrl": "https://apps.apple.com/in/app/dukaan-create-online-dukan/id1560859298",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.dukaan.app"
+}

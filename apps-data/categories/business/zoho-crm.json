@@ -1,0 +1,31 @@
+{
+  "name": "Zoho CRM",
+  "slug": "zoho-crm",
+  "description": "Customer relationship management software for sales teams and businesses",
+  "website": "https://www.zoho.com/crm/",
+  "category": "business",
+  "alternatives": [
+    "Salesforce",
+    "HubSpot",
+    "Pipedrive"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/crm-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:45.933Z",
+    "title": "Zoho CRM | Top-rated Sales CRM Software by Customers",
+    "description": "Zoho CRM is an online Sales CRM software to help manage your customer operations in one CRM platform. Trusted by over 100+ million users worldwide!",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/crm-logo.png",
+    "url": "https://www.zoho.com/en-in/crm/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Zoho CRM | Top-rated Sales CRM Software by Customers",
+    "twitter_description": "Zoho CRM is an online Sales CRM software to help manage your customer operations in one CRM platform. Trusted by over 100+ million users worldwide!",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/crm-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://apps.apple.com/app/id444908810"
+}

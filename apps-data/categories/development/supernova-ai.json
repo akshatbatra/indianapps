@@ -1,0 +1,25 @@
+{
+  "name": "Supernova AI",
+  "slug": "supernova-ai",
+  "description": "AI-powered tool for automating design and development workflows",
+  "website": "https://www.getsupernova.ai/",
+  "category": "development",
+  "alternatives": [
+    "Figma",
+    "Sketch",
+    "Adobe XD"
+  ],
+  "pricing": "Freemium",
+  "company": "Supernova AI",
+  "location": "India",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:35:03.206Z",
+    "type": "website",
+    "title": "Supernova AI Spoken English",
+    "description": "Supernova AI Spoken English - Best AI English learning app",
+    "url": "https://www.getsupernova.ai/",
+    "twitter_card": "summary_large_image",
+    "twitter_title": "Supernova AI Spoken English",
+    "twitter_description": "Supernova AI Spoken English - Best AI English learning app"
+  }
+}

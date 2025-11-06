@@ -1,0 +1,34 @@
+{
+  "name": "Zoho Projects",
+  "slug": "zoho-projects",
+  "description": "Comprehensive project management software with task tracking, Gantt charts, time tracking, collaboration tools, and resource management for teams of all sizes",
+  "website": "https://www.zoho.com/projects/",
+  "category": "business",
+  "alternatives": [
+    "Asana",
+    "Monday.com",
+    "Basecamp",
+    "Trello",
+    "Jira"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/projects-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:33:03.994Z",
+    "title": "Zoho Projects | Leading Project Management Software for Dynamic Teams",
+    "description": "Zoho Projects is a cloud-based project management solution that helps teams plan, track, collaborate, and achieve project goals. Try our online project management software for free!",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/projects-logo.png",
+    "url": "https://www.zoho.com/projects/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Zoho Projects | Leading Project Management Software for Dynamic Teams",
+    "twitter_description": "Zoho Projects is a cloud-based project management solution that helps teams plan, track, collaborate, and achieve project goals. Try our online project management software for free!",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/projects-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://itunes.apple.com/in/app/zoho-projects/id511887920?mt=8, https://apps.apple.com/app/id511887920",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.projects&hl=en_IN"
+}

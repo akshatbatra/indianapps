@@ -1,0 +1,34 @@
+{
+  "name": "Zoho Bookings",
+  "slug": "zoho-bookings",
+  "description": "Online appointment scheduling software with calendar sync, automated reminders, payment integration, team scheduling, custom booking pages, and analytics for service-based businesses",
+  "website": "https://www.zoho.com/bookings/",
+  "category": "business",
+  "alternatives": [
+    "Calendly",
+    "Acuity Scheduling",
+    "Appointy",
+    "SimplyBook.me",
+    "Square Appointments"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://zohowebstatic.com/sites/zweb/images/bookings/home/zbs-bookings-og-image.jpg",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:34.422Z",
+    "title": "Free online appointment scheduling software - Zoho Bookings",
+    "description": "Zoho Bookings offers free online appointment scheduling software with AI-powered customization, calendar sync, self-booking, and automated reminders with ease.",
+    "image": "https://zohowebstatic.com/sites/zweb/images/bookings/home/zbs-bookings-og-image.jpg",
+    "url": "https://www.zoho.com/bookings/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Free online appointment scheduling software - Zoho Bookings",
+    "twitter_description": "Zoho Bookings offers free online appointment scheduling software with AI-powered customization, calendar sync, self-booking, and automated reminders with ease.",
+    "twitter_image": "https://zohowebstatic.com/sites/zweb/images/bookings/home/zbs-bookings-og-image.jpg",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://itunes.apple.com/in/app/zoho-bookings/id1444416745?pt=423641&%3Bct=bookings_home_page&%3Bmt=8",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.bookings.a&%3Breferrer=utm_source%3Dbookings_home_page&%3Butm_medium=appbadge&%3Butm_campaign=bookings_home_page"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Topmate",
+  "slug": "topmate",
+  "description": "Link-in-bio tool with booking, payments, and audience engagement features",
+  "website": "https://topmate.io/",
+  "category": "business",
+  "alternatives": [
+    "Linktree",
+    "Beacons",
+    "Milkshake"
+  ],
+  "pricing": "Freemium",
+  "company": "Topmate",
+  "location": "Bangalore",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:31:56.861Z",
+    "title": "Your All-in-One Creator Storefront",
+    "description": "Make money from your content. Sell products, host sessions, and grow your business — all from a single link.",
+    "url": "https://topmate.io/",
+    "image": "https://topmate.io/meta_referral_image.png",
+    "type": "website",
+    "twitter_card": "summary_large_image",
+    "twitter_title": "Your All-in-One Creator Storefront",
+    "twitter_description": "Make money from your content. Sell products, host sessions, and grow your business — all from a single link.",
+    "twitter_image": "https://topmate.io/meta-referal-image.png"
+  }
+}

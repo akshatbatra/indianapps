@@ -1,0 +1,34 @@
+{
+  "name": "Zoho Assist",
+  "slug": "zoho-assist",
+  "description": "Remote support and access software for IT teams with screen sharing, remote control, file transfer, and unattended access capabilities for desktops and mobile devices",
+  "website": "https://www.zoho.com/assist/",
+  "category": "business",
+  "alternatives": [
+    "TeamViewer",
+    "AnyDesk",
+    "LogMeIn",
+    "Remote Desktop",
+    "ConnectWise Control"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/assist-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:30.078Z",
+    "title": "Best Remote Access Software | Remote Support Software - Zoho Assist",
+    "description": "Zoho Assist is a secure and easy-to-use remote desktop software for IT and support teams. Access, control, and troubleshoot devices from anywhere with Zoho Assist.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/assist-logo.png",
+    "url": "https://www.zoho.com/assist/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Best Remote Access Software | Remote Support Software - Zoho Assist",
+    "twitter_description": "Zoho Assist is a secure and easy-to-use remote desktop software for IT and support teams. Access, control, and troubleshoot devices from anywhere with Zoho Assist.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/assist-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://apps.apple.com/us/app/zoho-assist-remote-desktop/id582922932",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.assist"
+}

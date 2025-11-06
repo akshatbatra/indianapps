@@ -1,0 +1,34 @@
+{
+  "name": "Zoho ShowTime",
+  "slug": "zoho-showtime",
+  "description": "Remote training and webinar platform with screen sharing, interactive presentations, live polling, Q&A sessions, session recording, and attendee analytics for virtual training and events",
+  "website": "https://www.zoho.com/showtime/",
+  "category": "communication",
+  "alternatives": [
+    "Zoom Webinar",
+    "GoToWebinar",
+    "Webex Events",
+    "Microsoft Teams Live Events",
+    "Demio"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/showtime-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:34:13.609Z",
+    "title": "An online training platform | Zoho ShowTime",
+    "description": "Zoho ShowTime is a comprehensive solution to run your training business. Deliver virtual classroom and on-demand training, empower learners worldwide and generate revenue.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/showtime-logo.png",
+    "url": "https://www.zoho.com/showtime/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "An online training platform | Zoho ShowTime",
+    "twitter_description": "Zoho ShowTime is a comprehensive solution to run your training business. Deliver virtual classroom and on-demand training, empower learners worldwide and generate revenue.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/showtime-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://itunes.apple.com/app/apple-store/id925233601?pt=423641&ct=mobile_web&mt=8, https://itunes.apple.com/app/apple-store/id925233601?pt=423641&ct=showtime_home_page&mt=8",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.showtime.presenter&referrer=utm_source%3Dmobile_web&utm_medium=appbadge&utm_campaign=mobileweb, https://play.google.com/store/apps/details?id=com.zoho.showtime.presenter&referrer=utm_source%3Dshowtime_home_page&utm_medium=appbadge&utm_campaign=showtime_home_page"
+}

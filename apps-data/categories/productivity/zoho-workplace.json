@@ -1,0 +1,29 @@
+{
+  "name": "Zoho Workplace",
+  "slug": "zoho-workplace",
+  "description": "Complete office suite with Writer, Sheet, Show, and Mail for businesses and consumers",
+  "website": "https://www.zoho.com/workplace/",
+  "category": "productivity",
+  "alternatives": [
+    "Microsoft 365",
+    "Google Workspace"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/workplace-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:37:28.010Z",
+    "title": "Enterprise Collaboration Suite Made in India — Zoho Workplace",
+    "description": "Zoho Workplace is a productivity and collaboration suite trusted by millions globally. It brings mail, files, chat, office suite, conferencing, and more into one place.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/workplace-logo.png",
+    "url": "https://www.zoho.com/en-in/workplace/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Enterprise Collaboration Suite Made in India — Zoho Workplace",
+    "twitter_description": "Zoho Workplace is a productivity and collaboration suite trusted by millions globally. It brings mail, files, chat, office suite, conferencing, and more into one place.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/workplace-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  }
+}

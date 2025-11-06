@@ -1,0 +1,24 @@
+{
+  "name": "Hoppscotch",
+  "slug": "hoppscotch",
+  "description": "Open source API development ecosystem - beautiful, fast and lightweight alternative to Postman",
+  "website": "https://hoppscotch.io/",
+  "category": "development",
+  "alternatives": [
+    "Postman",
+    "Insomnia",
+    "Thunder Client"
+  ],
+  "pricing": "Free",
+  "company": "Hoppscotch",
+  "location": "India",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:34:42.038Z",
+    "twitter_card": "summary_large_image",
+    "twitter_site": "@hoppscotch_io",
+    "twitter_creator": "@hoppscotch_io",
+    "twitter_title": "Hoppscotch • Open source API development ecosystem",
+    "twitter_description": "Helps you create requests faster, saving precious time on development.",
+    "twitter_image": "https://hoppscotch.io/banner.png"
+  }
+}

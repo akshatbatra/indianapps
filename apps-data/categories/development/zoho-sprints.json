@@ -1,0 +1,34 @@
+{
+  "name": "Zoho Sprints",
+  "slug": "zoho-sprints",
+  "description": "Agile project management tool for Scrum teams with sprint planning, backlog management, burndown charts, daily standups, and team collaboration features for software development",
+  "website": "https://www.zoho.com/sprints/",
+  "category": "development",
+  "alternatives": [
+    "Jira Software",
+    "Azure DevOps",
+    "ClickUp",
+    "Linear",
+    "Shortcut"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/sprints-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:35:15.175Z",
+    "title": "Online agile project management software | Zoho Sprints",
+    "description": "Zoho Sprints is an Agile project management software that helps dynamic teams plan, track, iterate, and deliver their fast-paced projects with ease. Explore Zoho Sprints for free today.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/sprints-logo.png",
+    "url": "https://www.zoho.com/sprints/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Online agile project management software | Zoho Sprints",
+    "twitter_description": "Zoho Sprints is an Agile project management software that helps dynamic teams plan, track, iterate, and deliver their fast-paced projects with ease. Explore Zoho Sprints for free today.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/sprints-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://apps.apple.com/us/app/zoho-sprints/id1279756583, https://apps.apple.com/app/id1279756583",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.sprints&hl=en_US&pli=1"
+}

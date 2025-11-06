@@ -1,0 +1,23 @@
+{
+  "name": "Zoho Subscriptions",
+  "slug": "zoho-subscriptions",
+  "description": "Recurring billing and subscription management platform with automated invoicing, payment collection, dunning management, revenue recognition, and customer portal for SaaS businesses",
+  "website": "https://www.zoho.com/subscriptions/",
+  "category": "finance",
+  "alternatives": [
+    "Stripe Billing",
+    "Chargebee",
+    "Recurly",
+    "Paddle",
+    "ChargeBee"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:36:50.622Z",
+    "image": "/billing/images/og.png"
+  },
+  "appStoreUrl": "https://apps.apple.com/us/app/billing-management-app-zoho/id1184196693?pt=423641&ct=website_top_bar_downloads&mt=8, https://itunes.apple.com/app/apple-store/id1184196693?pt=423641&ct=website_homepage_mobilesection&mt=8, https://apps.apple.com/app/apple-store/id1184196693?pt=423641&ct=website_footer&mt=8, https://apps.apple.com/app/id1184196693",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.zsm&referrer=utm_source%3Dwebsite%26utm_medium%3Dtop_bar_downloads&pli=1, https://play.google.com/store/apps/details?id=com.zoho.zsm&referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage_mobilesection, https://play.google.com/store/apps/details?id=com.zoho.zsm&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter"
+}

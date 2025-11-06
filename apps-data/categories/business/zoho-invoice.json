@@ -1,0 +1,22 @@
+{
+  "name": "Zoho Invoice",
+  "slug": "zoho-invoice",
+  "description": "Free invoicing software for small businesses and freelancers",
+  "website": "https://www.zoho.com/invoice/",
+  "category": "business",
+  "alternatives": [
+    "Invoice2go",
+    "Wave",
+    "FreshBooks"
+  ],
+  "pricing": "Free",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://www.zoho.com/invoice/images/zi-og-image.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:55.112Z",
+    "image": "https://www.zoho.com/invoice/images/zi-og-image.png"
+  },
+  "appStoreUrl": "https://apps.apple.com/app/apple-store/id1477507499?pt=423641&ct=website_top_bar_downloads&mt=8, https://apps.apple.com/app/apple-store/id413017364?pt=423641&ct=website_homepage_primarycta&mt=8, https://apps.apple.com/app/apple-store/id1477507499?pt=423641&ct=website_homepage&mt=8, https://apps.apple.com/app/apple-store/id413017364?pt=423641&ct=new_homepage_download_cta&mt=8, https://apps.apple.com/app/apple-store/id413017364?pt=423641&ct=website_footer&mt=8, https://apps.apple.com/app/id413017364",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.invoice&referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage_primarycta, https://play.google.com/store/apps/details?id=com.zoho.invoice&referrer=utm_source%3Dnew_homepage%26utm_medium%3Ddownload_cta, https://play.google.com/store/apps/details?id=com.zoho.invoice&referrer=utm_source%3Dnew_homepage%26utm_medium%3Dfooter"
+}

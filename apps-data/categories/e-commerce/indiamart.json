@@ -1,0 +1,28 @@
+{
+  "name": "IndiaMART",
+  "slug": "indiamart",
+  "description": "India's largest B2B marketplace connecting buyers and suppliers across manufacturing, wholesale, and business services",
+  "website": "https://www.indiamart.com/",
+  "category": "e-commerce",
+  "alternatives": [
+    "Alibaba",
+    "TradeIndia",
+    "ExportersIndia"
+  ],
+  "pricing": "Freemium",
+  "company": "IndiaMART InterMESH Limited",
+  "location": "Noida, Uttar Pradesh",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:35:27.262Z",
+    "title": "IndiaMART - Indian Manufacturers Suppliers Exporters Directory,India Exporter Manufacturer",
+    "type": "website",
+    "url": "https://www.indiamart.com",
+    "site_name": "IndiaMART",
+    "image": "//hm.imimg.com/imhome_gifs/indiamart-og1.jpg",
+    "image:url": "//hm.imimg.com/imhome_gifs/indiamart-og1.jpg",
+    "image:width": "600",
+    "image:height": "315"
+  },
+  "appStoreUrl": "https://itunes.apple.com/us/app/indiamart-buy-sell-products/id668561641?mt=8",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.indiamart.m"
+}

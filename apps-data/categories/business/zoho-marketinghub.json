@@ -1,0 +1,32 @@
+{
+  "name": "Zoho MarketingHub",
+  "slug": "zoho-marketinghub",
+  "description": "All-in-one marketing automation platform with email campaigns, lead management, webinar hosting, social media management, marketing analytics, and multi-channel campaign orchestration",
+  "website": "https://www.zoho.com/marketinghub/",
+  "category": "business",
+  "alternatives": [
+    "HubSpot Marketing Hub",
+    "Marketo",
+    "Pardot",
+    "ActiveCampaign",
+    "Mailchimp"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/marketingautomation-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:57.402Z",
+    "title": "Best marketing automation platform for your business - Zoho",
+    "description": "Our automation software empowers you to create targeted campaigns across channels, that engage and convert your audience. Try it today and see the results.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/marketingautomation-logo.png",
+    "url": "https://www.zoho.com/marketingautomation/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Best marketing automation platform for your business - Zoho",
+    "twitter_description": "Our automation software empowers you to create targeted campaigns across channels, that engage and convert your audience. Try it today and see the results.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/marketingautomation-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Site24x7",
+  "slug": "site24x7",
+  "description": "Application performance monitoring and infrastructure monitoring platform",
+  "website": "https://www.site24x7.com/",
+  "category": "development",
+  "alternatives": [
+    "Datadog",
+    "New Relic",
+    "Dynatrace"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai"
+}

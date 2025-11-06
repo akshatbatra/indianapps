@@ -1,0 +1,32 @@
+{
+  "name": "Zoho Forms",
+  "slug": "zoho-forms",
+  "description": "Online form builder for surveys, data collection and workflows",
+  "website": "https://www.zoho.com/forms/",
+  "category": "business",
+  "alternatives": [
+    "Google Forms",
+    "Typeform",
+    "JotForm"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/forms-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:50.317Z",
+    "title": "Form Builder | Create Free Online Forms - Zoho Forms",
+    "description": "Zoho Forms is a powerful online form builder for businesses. Build and share forms online, and easily collaborate with your team. Try our free online form builder!",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/forms-logo.png",
+    "url": "https://www.zoho.com/forms/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Form Builder | Create Free Online Forms - Zoho Forms",
+    "twitter_description": "Zoho Forms is a powerful online form builder for businesses. Build and share forms online, and easily collaborate with your team. Try our free online form builder!",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/forms-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://apps.apple.com/app/apple-store/id805565969",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.forms.a&referrer=utm_source%3Dforms_home_page&utm_medium=appbadge&utm_campaign=forms_home_page"
+}

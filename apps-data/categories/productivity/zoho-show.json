@@ -1,0 +1,31 @@
+{
+  "name": "Zoho Show",
+  "slug": "zoho-show",
+  "description": "Online presentation software for creating slides and presentations",
+  "website": "https://www.zoho.com/show/",
+  "category": "productivity",
+  "alternatives": [
+    "Microsoft PowerPoint",
+    "Google Slides"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/show-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:37:23.659Z",
+    "title": "Online Presentation Software | Create & Edit Slides Online - Zoho Show",
+    "description": "Zoho Show is a free online presentation software that lets you create, collaborate, publish, and broadcast presentations from any device, quick and easy.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/show-logo.png",
+    "url": "https://www.zoho.com/show/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Online Presentation Software | Create & Edit Slides Online - Zoho Show",
+    "twitter_description": "Zoho Show is a free online presentation software that lets you create, collaborate, publish, and broadcast presentations from any device, quick and easy.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/show-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://itunes.apple.com/us/app/show-view-import-present/id1309156447?ls=1&mt=8, https://apps.apple.com/app/id1309156447",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.show.app"
+}

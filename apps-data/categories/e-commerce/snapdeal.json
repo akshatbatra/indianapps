@@ -1,0 +1,33 @@
+{
+  "name": "Snapdeal",
+  "slug": "snapdeal",
+  "description": "Value-focused e-commerce marketplace offering a wide range of products across electronics, fashion, and home goods",
+  "website": "https://www.snapdeal.com/",
+  "category": "e-commerce",
+  "alternatives": [
+    "Amazon",
+    "Flipkart",
+    "Shopclues"
+  ],
+  "pricing": "Free",
+  "company": "Snapdeal Limited",
+  "location": "New Delhi",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:35:45.426Z",
+    "title": "Snapdeal.com",
+    "site_name": "Snapdeal.com",
+    "url": "https://www.snapdeal.com",
+    "twitter_card": "app",
+    "twitter_app:country": "IN",
+    "twitter_app:name:iphone": "Snapdeal",
+    "twitter_app:id:iphone": "721124909",
+    "twitter_app:name:ipad": "Snapdeal",
+    "twitter_app:id:ipad": "721124909",
+    "twitter_app:name:googleplay": "Snapdeal",
+    "twitter_app:id:googleplay": "com.snapdeal.main",
+    "twitter_app:url:iphone": "snapdeal://m.snapdeal.com",
+    "twitter_app:url:ipad": "snapdeal://m.snapdeal.com",
+    "twitter_app:url:googleplay": "snapdeal://m.snapdeal.com"
+  },
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.snapdeal.main&utm_source=web_footer&utm_campaign=android, https://play.google.com/store/apps/details?id=com.snapdeal.main&hl=en_IN, https://play.google.com/store/apps/details?id=com.snapdeal.main"
+}

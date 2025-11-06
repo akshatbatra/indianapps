@@ -1,0 +1,34 @@
+{
+  "name": "Zoho Vault",
+  "slug": "zoho-vault",
+  "description": "Password manager and digital vault for individuals and teams with secure password storage, sharing, auto-fill, emergency access, password generator, and multi-factor authentication",
+  "website": "https://www.zoho.com/vault/",
+  "category": "utilities",
+  "alternatives": [
+    "1Password",
+    "LastPass",
+    "Bitwarden",
+    "Dashlane",
+    "Keeper"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai, Tamil Nadu",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/vault-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:37:59.391Z",
+    "title": "Zoho Vault: Password Manager with Single Sign-On & MFA for Businesses, Teams & Families",
+    "description": "Zoho Vault is an online password manager that acts as a digital vault for your identities. Safely manage all your passwords & protect them from cyberthreats. Try for free. No credit card required.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/vault-logo.png",
+    "url": "https://www.zoho.com/vault/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Zoho Vault: Password Manager with Single Sign-On & MFA for Businesses, Teams & Families",
+    "twitter_description": "Zoho Vault is an online password manager that acts as a digital vault for your identities. Safely manage all your passwords & protect them from cyberthreats. Try for free. No credit card required.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/vault-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  },
+  "appStoreUrl": "https://apps.apple.com/us/app/zoho-vault-password-manager/id634857858, https://itunes.apple.com/app/apple-store/id634857858?pt=423641&ct=vault_home_page&mt=8, https://apps.apple.com/us/app/id1512156331, https://apps.apple.com/app/id634857858",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.zoho.vault&hl=en_IN, https://play.google.com/store/apps/details?id=com.zoho.vault&referrer=utm_source%3Dvault_home_page&utm_medium=appbadge&utm_campaign=vault_home_page"
+}

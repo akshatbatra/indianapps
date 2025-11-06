@@ -1,0 +1,30 @@
+{
+  "name": "Zoho Commerce",
+  "slug": "zoho-commerce",
+  "description": "E-commerce platform for building online stores and marketplaces",
+  "website": "https://www.zoho.com/commerce/",
+  "category": "business",
+  "alternatives": [
+    "Shopify",
+    "WooCommerce",
+    "BigCommerce"
+  ],
+  "pricing": "Freemium",
+  "company": "Zoho Corporation",
+  "location": "Chennai",
+  "faviconUrl": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/commerce-logo.png",
+  "opengraph": {
+    "last_updated": "2025-10-05T10:32:41.242Z",
+    "title": "Zoho Commerce | Build your own online store with us",
+    "description": "Build an online store for your ecommerce business and start receiving and managing online orders with Zoho Commerce. Explore all features with 14-day free trial.",
+    "image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/commerce-logo.png",
+    "url": "https://www.zoho.com/commerce/",
+    "site_name": "Zoho",
+    "type": "website",
+    "twitter_title": "Zoho Commerce | Build your own online store with us",
+    "twitter_description": "Build an online store for your ecommerce business and start receiving and managing online orders with Zoho Commerce. Explore all features with 14-day free trial.",
+    "twitter_image": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/commerce-logo.png",
+    "twitter_card": "summary",
+    "twitter_site": "@zoho"
+  }
+}

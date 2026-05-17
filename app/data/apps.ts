@@ -13,7 +13,7 @@ export const apps = [
     "pricing": "Free to Download",
     "company": "Ola Electric Mobility",
     "location": "Bangalore",
-    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Ola_Cabs_logo.svg/534px-Ola_Cabs_logo.svg.png?20210518001051",
+    "image": "https://blog.olacabs.com/wp-content/uploads/2017/08/Inbox-logo.jpg",
     "description_long": "Book a ride with Ola - India's leading ride-hailing platform. Get safe, reliable, and affordable rides with just a tap. Ola Cabs offers multiple vehicle options including Ola Auto, Ola Bike, and Ola Bus services."
   },
   {

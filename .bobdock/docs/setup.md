@@ -6,16 +6,13 @@
 - **Node.js**: Version 20.x or higher
 - **npm**: Version 10.x or higher (comes with Node.js)
 - **Git**: For version control
-- **Code Editor**: VS Code recommended
+- **Code Editor**: VS Code recommended with TypeScript extensions
 
-### Recommended VS Code Extensions
-- **ES7+ React/Redux/React-Native snippets**: For React snippets
-- **TypeScript and JavaScript Language Features**: Built-in
-- **CSS Modules**: For CSS module intellisense
-- **Prettier**: Code formatting
-- **ESLint**: Linting (if configured)
+### Optional Tools
+- **Vercel CLI**: For deployment testing
+- **TypeScript**: Globally installed for type checking
 
-## Installation Steps
+## Initial Setup
 
 ### 1. Clone Repository
 ```bash
@@ -28,21 +25,17 @@ cd indianapps
 npm install
 ```
 
-**Dependencies Installed**:
+This installs:
 - `next@^16.2.6` - Next.js framework
 - `react@19.2.0` - React library
 - `react-dom@19.2.0` - React DOM renderer
-
-**Dev Dependencies**:
-- `@types/node@^20` - Node.js type definitions
-- `@types/react@^19` - React type definitions
-- `@types/react-dom@^19` - React DOM type definitions
 - `typescript@^5` - TypeScript compiler
+- `@types/node`, `@types/react`, `@types/react-dom` - Type definitions
 
 ### 3. Verify Installation
 ```bash
 node --version  # Should be v20.x or higher
-npm --version   # Should be v10.x or higher
+npm --version   # Should be 10.x or higher
 ```
 
 ## Development Workflow
@@ -52,87 +45,33 @@ npm --version   # Should be v10.x or higher
 npm run dev
 ```
 
-**Output**:
-```
-  ▲ Next.js 16.2.6
-  - Local:        http://localhost:3000
-  - Network:      http://192.168.x.x:3000
-
- ✓ Ready in 2.5s
-```
-
-**Access Application**:
-- Open browser to `http://localhost:3000`
-- Hot reload enabled (changes reflect immediately)
+- Opens at `http://localhost:3000`
+- Hot reload enabled for instant updates
+- TypeScript compilation on-the-fly
+- CSS modules automatically processed
 
 ### Build for Production
 ```bash
 npm run build
 ```
 
-**Build Process**:
-1. TypeScript compilation
-2. CSS module processing
-3. Static page generation
-4. Asset optimization
-5. Bundle creation
-
-**Output Directory**: `.next/`
+- Creates optimized production build in `.next/` directory
+- Performs static analysis and type checking
+- Generates static pages where possible
+- Minifies JavaScript and CSS
 
 ### Start Production Server
 ```bash
 npm run start
 ```
 
-**Note**: Requires `npm run build` first.
+- Serves the production build
+- Requires `npm run build` to be run first
+- Runs on `http://localhost:3000` by default
 
-## Project Structure
+## Project Configuration
 
-```
-indinapps/
-├── app/                          # Next.js App Router directory
-│   ├── page.tsx                  # Home page (search interface)
-│   ├── layout.tsx                # Root layout
-│   ├── globals.css               # Global styles
-│   ├── page.module.css           # Home page styles
-│   ├── listing.module.css        # Listing page styles
-│   ├── app-details.module.css    # App detail styles
-│   ├── favicon.ico               # Favicon
-│   ├── data/
-│   │   └── apps.ts               # App data (200+ entries)
-│   ├── listing/
-│   │   └── page.tsx              # Listing page
-│   └── app/
-│       └── [slug]/
-│           └── page.tsx          # Dynamic app detail page
-├── public/                       # Static assets
-│   └── bharatapps.png            # Logo image
-├── apps-data/                    # Raw data (not used in app)
-├── next.config.ts                # Next.js configuration
-├── tsconfig.json                 # TypeScript configuration
-├── package.json                  # Dependencies and scripts
-├── package-lock.json             # Dependency lock file
-├── .gitignore                    # Git ignore rules
-└── .vercelignore                 # Vercel ignore rules
-```
-
-## Configuration Files
-
-### next.config.ts
-```typescript
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
-```
-
-**Purpose**: Next.js framework configuration
-**Current State**: Default configuration (no custom settings)
-
-### tsconfig.json
+### TypeScript Configuration (`tsconfig.json`)
 ```json
 {
   "compilerOptions": {
@@ -149,122 +88,109 @@ export default nextConfig;
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}
-```
-
-**Key Settings**:
-- `strict: true` - Enables all strict type checking
-- `paths: { "@/*": ["./*"] }` - Enables `@/` import alias
-- `jsx: "preserve"` - Preserves JSX for Next.js processing
-
-### package.json Scripts
-```json
-{
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "plugins": [{"name": "next"}],
+    "paths": {"@/*": ["./*"]}
   }
 }
 ```
 
+**Key Settings:**
+- `strict: true` - Full TypeScript strict mode
+- `paths: {"@/*": ["./*"]}` - Absolute imports from project root
+- `jsx: preserve` - Let Next.js handle JSX transformation
+
+### Next.js Configuration (`next.config.ts`)
+```typescript
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
+```
+
+**Current State:** Minimal configuration, using Next.js defaults
+
+**Common Customizations (if needed):**
+```typescript
+const nextConfig: NextConfig = {
+  output: 'export',        // For static export
+  images: {
+    unoptimized: true      // Required for static export
+  },
+  basePath: '/indianapps', // If deploying to subdirectory
+};
+```
+
 ## Environment Variables
 
-**Current State**: No environment variables used
+### Not Currently Used
+The application does not use environment variables as it's a fully static site with no backend services.
 
-**If Needed**: Create `.env.local` file:
+### If Adding External Services
+Create `.env.local` file:
 ```bash
-# Example (not currently used)
-NEXT_PUBLIC_API_URL=https://api.example.com
+# Analytics
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+
+# API Keys (if adding backend)
+API_KEY=your-api-key
 ```
 
-**Access in Code**:
+**Important:** Never commit `.env.local` to version control
+
+## File Structure Conventions
+
+### Component Files
+- Use `.tsx` extension for React components
+- Use `.ts` extension for utility functions
+- Co-locate CSS modules with components: `component.module.css`
+
+### Naming Conventions
+- **Components**: PascalCase (e.g., `AppCard.tsx`)
+- **Pages**: lowercase with hyphens (e.g., `app-details.tsx`)
+- **Utilities**: camelCase (e.g., `formatDate.ts`)
+- **CSS Modules**: kebab-case (e.g., `app-details.module.css`)
+
+### Import Paths
 ```typescript
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+// Absolute imports using @ alias
+import { apps } from '@/app/data/apps';
+import styles from '@/app/listing.module.css';
+
+// Relative imports for nearby files
+import { AppCard } from './AppCard';
 ```
 
-## Common Development Tasks
+## Development Best Practices
 
-### Adding a New App
+### Type Safety
+- Always define types for component props
+- Use TypeScript's strict mode
+- Avoid `any` type unless absolutely necessary
+- Define interfaces for data structures
 
-1. Open `app/data/apps.ts`
-2. Add new entry to `apps` array:
-```typescript
-{
-  name: "New App Name",
-  slug: "new-app-name",
-  description: "Short description",
-  description_long: "Longer description (optional)",
-  category: "business", // or other category
-  website: "https://example.com",
-  alternatives: ["Foreign App 1", "Foreign App 2"],
-  pricing: "Freemium", // Free/Freemium/Paid
-  company: "Company Name",
-  location: "City, State",
-  image: "https://example.com/logo.png"
-}
-```
-3. Save file (hot reload will update)
+### Code Organization
+- Keep components small and focused
+- Extract reusable logic into utility functions
+- Use CSS modules for component-specific styles
+- Keep global styles minimal
 
-### Modifying Styles
-
-**CSS Modules**:
-1. Open relevant `.module.css` file
-2. Add/modify class:
-```css
-.newClass {
-  color: blue;
-  font-size: 16px;
-}
-```
-3. Use in component:
-```typescript
-import styles from './page.module.css';
-<div className={styles.newClass}>Content</div>
-```
-
-**Global Styles**:
-1. Open `app/globals.css`
-2. Add global styles:
-```css
-body {
-  font-family: Arial, sans-serif;
-}
-```
-
-### Creating New Page
-
-1. Create directory in `app/`:
-```bash
-mkdir -p app/new-page
-```
-
-2. Create `page.tsx`:
-```typescript
-export default function NewPage() {
-  return <div>New Page Content</div>;
-}
-```
-
-3. Access at `http://localhost:3000/new-page`
+### Performance
+- Use Next.js Image component for images (when not static export)
+- Implement code splitting for large components
+- Memoize expensive computations with `useMemo`
+- Debounce search inputs
 
 ## Troubleshooting
 
 ### Port Already in Use
 ```bash
-# Error: Port 3000 is already in use
-# Solution: Use different port
+# Kill process on port 3000
+lsof -ti:3000 | xargs kill -9
+
+# Or use different port
 npm run dev -- -p 3001
 ```
 
@@ -272,11 +198,7 @@ npm run dev -- -p 3001
 ```bash
 # Clear Next.js cache
 rm -rf .next
-npm run dev
-```
 
-### Module Not Found
-```bash
 # Reinstall dependencies
 rm -rf node_modules package-lock.json
 npm install
@@ -284,121 +206,63 @@ npm install
 
 ### Build Failures
 ```bash
-# Check TypeScript errors
+# Check for TypeScript errors
 npx tsc --noEmit
 
-# Check for syntax errors
+# Check for linting issues (if ESLint configured)
+npm run lint
+```
+
+### Module Not Found
+- Verify import paths are correct
+- Check `tsconfig.json` paths configuration
+- Ensure file extensions are included for non-TS files
+
+## IDE Setup (VS Code)
+
+### Recommended Extensions
+- **ESLint**: Code linting
+- **Prettier**: Code formatting
+- **TypeScript and JavaScript Language Features**: Built-in
+- **CSS Modules**: IntelliSense for CSS modules
+
+### Workspace Settings (`.vscode/settings.json`)
+```json
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+```
+
+## Testing Setup (Not Currently Implemented)
+
+### If Adding Tests
+```bash
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+```
+
+### Test Structure
+```
+app/
+├── __tests__/
+│   ├── page.test.tsx
+│   └── listing.test.tsx
+```
+
+## Deployment Preparation
+
+See `deployment.md` for detailed deployment instructions.
+
+### Quick Deployment Check
+```bash
+# Build and verify
 npm run build
-```
+npm run start
 
-## Testing Locally
-
-### Manual Testing Checklist
-
-**Home Page**:
-- [ ] Search for foreign app (e.g., "WhatsApp")
-- [ ] Verify autocomplete suggestions appear
-- [ ] Click on suggested Indian app
-- [ ] Verify navigation to app detail page
-- [ ] Click "Browse All Indian Apps" button
-
-**Listing Page**:
-- [ ] Verify all apps displayed in grid
-- [ ] Search for Indian app by name
-- [ ] Verify filtered results
-- [ ] Click on app card
-- [ ] Verify navigation to app detail page
-
-**App Detail Page**:
-- [ ] Verify app information displayed
-- [ ] Check foreign alternatives list
-- [ ] Verify similar apps section
-- [ ] Click "Visit Website" link (opens in new tab)
-- [ ] Test back navigation
-
-### Performance Testing
-
-**Lighthouse Audit**:
-1. Open Chrome DevTools
-2. Go to Lighthouse tab
-3. Run audit
-4. Target scores:
-   - Performance: 90+
-   - Accessibility: 90+
-   - Best Practices: 90+
-   - SEO: 90+
-
-## Deployment
-
-### Vercel Deployment (Recommended)
-
-1. **Install Vercel CLI**:
-```bash
-npm install -g vercel
-```
-
-2. **Login**:
-```bash
-vercel login
-```
-
-3. **Deploy**:
-```bash
-vercel
-```
-
-4. **Production Deployment**:
-```bash
-vercel --prod
-```
-
-### Alternative: Static Export
-
-1. **Configure** `next.config.ts`:
-```typescript
-const nextConfig = {
-  output: 'export'
-};
-```
-
-2. **Build**:
-```bash
-npm run build
-```
-
-3. **Output**: `out/` directory (deploy to any static host)
-
-## Development Best Practices
-
-### Code Style
-- Use TypeScript for type safety
-- Follow React hooks best practices
-- Use CSS Modules for component styles
-- Keep components small and focused
-
-### Performance
-- Use `useMemo` for expensive computations
-- Implement lazy loading for images
-- Minimize bundle size
-- Avoid unnecessary re-renders
-
-### Accessibility
-- Use semantic HTML
-- Add alt text to images
-- Ensure keyboard navigation
-- Test with screen readers
-
-### Git Workflow
-```bash
-# Create feature branch
-git checkout -b feature/new-feature
-
-# Make changes and commit
-git add .
-git commit -m "feat: add new feature"
-
-# Push to remote
-git push origin feature/new-feature
-
-# Create pull request on GitHub
+# Test all routes
+# - http://localhost:3000 (home)
+# - http://localhost:3000/listing (browse)
+# - http://localhost:3000/app/zoho-crm (sample detail page)
 ```

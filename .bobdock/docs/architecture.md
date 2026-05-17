@@ -1,163 +1,45 @@
-# System Architecture
+# BharatApps - System Architecture
 
-## Architectural Overview
+## Architecture Overview
 
-BharatApps follows a **Static Site Generation (SSG)** architecture using Next.js App Router. The application is entirely client-side rendered with no backend services, making it highly cacheable and performant.
+BharatApps follows a **Static Site Generation (SSG)** architecture using Next.js App Router. The application is entirely client-side with no backend services, making it fast, secure, and easy to deploy.
 
 ```mermaid
 graph TD
     A[User Browser] --> B[Next.js App]
-    B --> C[Home Page /]
-    B --> D[Listing Page /listing]
-    B --> E[App Detail /app/slug]
+    B --> C[Home Page - Search]
+    B --> D[Listing Page - Browse]
+    B --> E[App Detail Pages]
     C --> F[apps.ts Data]
     D --> F
     E --> F
-    F --> G[Static Build]
-    G --> H[Vercel CDN]
+    F --> G[Static JSON-like Structure]
 ```
 
-## Component Architecture
+## Design Patterns
 
-### Page Components
+### 1. Static Data Pattern
+**Pattern**: Compile-time data embedding
+**Implementation**: All app data stored in `app/data/apps.ts` as a TypeScript constant
+**Benefits**:
+- Zero runtime database queries
+- Type-safe data access
+- Instant search performance
+- No API latency
 
-#### 1. Home Page (`app/page.tsx`)
-**Responsibility**: Primary search interface for finding Indian alternatives
+**Trade-offs**:
+- Requires rebuild to update data
+- Not suitable for user-generated content
+- All data bundled in JavaScript
 
-**Key Features**:
-- Foreign app search with autocomplete
-- Real-time suggestion dropdown
-- Reverse mapping from foreign apps to Indian alternatives
-- Benefits section
-- Navigation to listing page
+### 2. Client-Side Search Pattern
+**Pattern**: In-memory filtering and indexing
+**Implementation**: 
+- Build foreign app → Indian alternatives map on component mount
+- Use `useMemo` for optimized search filtering
+- Real-time autocomplete with substring matching
 
-**State Management**:
-```typescript
-const [searchQuery, setSearchQuery] = useState('');
-const suggestions = useMemo(() => {
-  if (!searchQuery) return [];
-  const query = searchQuery.toLowerCase();
-  return uniqueForeignApps
-    .filter(app => app.includes(query))
-    .slice(0, 8);
-}, [searchQuery]);
-```
-
-**Data Processing**:
-- Builds `foreignAppToIndianAlternatives` map on component mount
-- Extracts unique foreign app names from all alternatives
-- Performs case-insensitive filtering
-
-#### 2. Listing Page (`app/listing/page.tsx`)
-**Responsibility**: Browse and filter all Indian apps
-
-**Key Features**:
-- Grid display of all apps
-- Search by Indian app name or description
-- Category and alternative badges
-- App count display
-
-**State Management**:
-```typescript
-const [searchQuery, setSearchQuery] = useState('');
-const searchFilteredApps = useMemo(() => {
-  if (!searchQuery) return apps;
-  const query = searchQuery.toLowerCase();
-  return apps.filter(
-    app => app.name.toLowerCase().includes(query) || 
-           app.description.toLowerCase().includes(query)
-  );
-}, [searchQuery]);
-```
-
-#### 3. App Detail Page (`app/app/[slug]/page.tsx`)
-**Responsibility**: Display comprehensive information about a specific app
-
-**Key Features**:
-- Dynamic route parameter handling
-- App information display (image, name, category, company, location)
-- Foreign alternatives list
-- Similar apps recommendation (same category)
-- Conditional navigation (back to home or listing based on referrer)
-
-**Route Handling**:
-```typescript
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
-
-// Async params handling for Next.js 15+
-useEffect(() => {
-  paramsPromise.then(p => {
-    setParams(p);
-    const foundApp = apps.find(a => a.slug === p.slug);
-    setApp(foundApp || null);
-  });
-}, [paramsPromise]);
-```
-
-### Layout Component (`app/layout.tsx`)
-
-**Responsibility**: Root layout with metadata and font configuration
-
-**Key Elements**:
-- SEO metadata (title, description, favicon)
-- Google Fonts integration (Geist Sans, Geist Mono)
-- Global CSS imports
-- HTML structure
-
-## Data Architecture
-
-### Data Source: `app/data/apps.ts`
-
-**Structure**: Single TypeScript file exporting array of 200+ app objects
-
-**Schema**:
-```typescript
-export const apps = [
-  {
-    name: string,
-    slug: string,
-    description: string,
-    description_long?: string,
-    category: string,
-    website: string,
-    alternatives: string[],
-    pricing: string,
-    company: string,
-    location: string,
-    image: string
-  },
-  // ... 200+ more entries
-];
-```
-
-**Data Characteristics**:
-- **Size**: ~113KB (112,746 bytes)
-- **Format**: TypeScript array literal
-- **Validation**: Type-checked at compile time
-- **Immutability**: Read-only at runtime
-
-### Data Access Patterns
-
-#### Pattern 1: Direct Import
-```typescript
-import { apps } from './data/apps';
-// or
-import { apps } from '@/app/data/apps';
-```
-
-#### Pattern 2: Filtering by Category
-```typescript
-const businessApps = apps.filter(app => app.category === 'business');
-```
-
-#### Pattern 3: Finding by Slug
-```typescript
-const app = apps.find(a => a.slug === slug);
-```
-
-#### Pattern 4: Reverse Mapping (Foreign → Indian)
+**Code Example**:
 ```typescript
 const foreignAppToIndianAlternatives: Record<string, typeof apps> = {};
 apps.forEach(app => {
@@ -171,218 +53,224 @@ apps.forEach(app => {
 });
 ```
 
-## Styling Architecture
-
-### CSS Modules Pattern
-
-**Files**:
-- `app/page.module.css` - Home page styles
-- `app/listing.module.css` - Listing page styles
-- `app/app-details.module.css` - App detail page styles
-- `app/globals.css` - Global styles and resets
-
-**Usage Pattern**:
-```typescript
-import styles from './page.module.css';
-
-<div className={styles.container}>
-  <h1 className={styles.title}>Title</h1>
-</div>
-```
-
+### 3. Dynamic Routing Pattern
+**Pattern**: File-system based routing with dynamic segments
+**Implementation**: `app/app/[slug]/page.tsx` handles all app detail pages
 **Benefits**:
-- Scoped styles (no global namespace pollution)
-- Type-safe class names (TypeScript autocomplete)
-- Automatic dead code elimination
-- No runtime CSS-in-JS overhead
+- SEO-friendly URLs (e.g., `/app/zoho-crm`)
+- Automatic route generation
+- Type-safe params with TypeScript
 
-### Inline Styles
+### 4. CSS Modules Pattern
+**Pattern**: Component-scoped styling
+**Implementation**: Separate `.module.css` files for each page/component
+**Benefits**:
+- No style conflicts
+- Better code organization
+- Automatic class name hashing
 
-Home page uses inline styles for dynamic gradient background and interactive hover effects:
+## Data Flow
 
+### Search Flow (Home Page)
+```
+User Input → State Update → useMemo Filter → Suggestions Array → Dropdown Render
+     ↓
+  Search Query (lowercase)
+     ↓
+  Filter uniqueForeignApps array
+     ↓
+  Match against foreignAppToIndianAlternatives map
+     ↓
+  Display grouped results with app cards
+```
+
+### Browse Flow (Listing Page)
+```
+User Input → State Update → useMemo Filter → Filtered Apps → Grid Render
+     ↓
+  Search Query
+     ↓
+  Filter apps array by name/description
+     ↓
+  Display app cards with alternatives
+```
+
+### Detail Page Flow
+```
+URL Slug → Params Promise → Find App → Render Details
+     ↓
+  Extract slug from URL
+     ↓
+  Search apps array for matching slug
+     ↓
+  Display full app information + similar apps
+```
+
+## Component Relationships
+
+### Page Hierarchy
+```
+RootLayout (app/layout.tsx)
+├── HomePage (app/page.tsx)
+│   ├── Search Input
+│   ├── Suggestions Dropdown
+│   └── Benefits Section
+├── ListingPage (app/listing/page.tsx)
+│   ├── Search Input
+│   └── Apps Grid
+└── AppDetailsPage (app/app/[slug]/page.tsx)
+    ├── App Header
+    ├── Details Section
+    ├── Alternatives List
+    └── Similar Apps Grid
+```
+
+### State Management
+**Approach**: React useState + useMemo (no external state library)
+**Rationale**: Simple application with minimal state requirements
+
+**State Locations**:
+- `HomePage`: `searchQuery` (string)
+- `ListingPage`: `searchQuery` (string)
+- `AppDetailsPage`: `params` (object), `app` (object)
+
+## Data Structure
+
+### App Schema
 ```typescript
-style={{
-  background: 'linear-gradient(135deg, #ff8c00 0%, #ffffff 50%, #008000 100%)',
-  padding: '4rem 2rem',
-  minHeight: '100vh'
-}}
-```
-
-**Rationale**: Enables dynamic styling without CSS module complexity for one-off styles.
-
-## Routing Architecture
-
-### Next.js App Router Structure
-
-```
-app/
-├── page.tsx                 # Route: /
-├── layout.tsx               # Root layout
-├── globals.css              # Global styles
-├── listing/
-│   └── page.tsx            # Route: /listing
-└── app/
-    └── [slug]/
-        └── page.tsx        # Route: /app/:slug
-```
-
-### Dynamic Routes
-
-**Pattern**: File-based routing with dynamic segments
-
-**Example**: `/app/[slug]/page.tsx`
-- Matches: `/app/zoho-crm`, `/app/ola-cabs`, etc.
-- Params: `{ slug: 'zoho-crm' }`
-
-### Navigation Patterns
-
-#### 1. Link Component (Client-Side)
-```typescript
-import Link from 'next/link';
-
-<Link href="/listing">Browse All</Link>
-<Link href={`/app/${app.slug}`}>{app.name}</Link>
-```
-
-#### 2. Query Parameters
-```typescript
-import { useSearchParams } from 'next/navigation';
-
-const searchParams = useSearchParams();
-const fromHome = searchParams.get('from') === 'home';
-```
-
-## Performance Optimizations
-
-### 1. useMemo for Expensive Computations
-```typescript
-const suggestions = useMemo(() => {
-  // Expensive filtering logic
-}, [searchQuery]);
-```
-
-### 2. Lazy Image Loading
-```typescript
-<img 
-  src={app.image} 
-  alt={app.name}
-  onError={(e) => {
-    e.currentTarget.style.display = 'none';
-  }}
-/>
-```
-
-### 3. Static Data (No API Calls)
-- All data bundled at build time
-- No runtime data fetching
-- Instant page loads
-
-### 4. CSS Modules (Build-Time Processing)
-- Styles extracted and minified
-- Critical CSS inlined
-- Non-critical CSS lazy-loaded
-
-## Security Considerations
-
-### 1. No User Input Persistence
-- Search queries not stored
-- No cookies or local storage
-- No user tracking
-
-### 2. External Links
-```typescript
-<a href={app.website} target="_blank" rel="noopener noreferrer">
-  Visit Website →
-</a>
-```
-- `rel="noopener noreferrer"` prevents window.opener exploitation
-
-### 3. Image Error Handling
-```typescript
-onError={(e) => {
-  e.currentTarget.style.display = 'none';
-}}
-```
-- Graceful degradation for broken image URLs
-
-## Deployment Architecture
-
-### Build Process
-1. **TypeScript Compilation**: `.tsx` → `.js`
-2. **CSS Processing**: Modules → Scoped CSS
-3. **Static Generation**: Pages → HTML
-4. **Asset Optimization**: Images, fonts minified
-5. **Bundle Creation**: Client-side JavaScript chunks
-
-### Vercel Deployment
-- **Build Command**: `npm run build`
-- **Output Directory**: `.next/`
-- **Environment**: Node.js 20.x
-- **CDN**: Automatic edge caching
-
-### Static Export (Alternative)
-```json
-// next.config.ts
-const nextConfig = {
-  output: 'export'
-};
-```
-
-Enables deployment to any static hosting (Netlify, GitHub Pages, S3).
-
-## Error Handling
-
-### 1. App Not Found
-```typescript
-if (!app) {
-  return (
-    <div className={styles.notFound}>
-      <h1>App not found</h1>
-      <Link href="/listing">← Back to Listing</Link>
-    </div>
-  );
+interface App {
+  name: string;              // Display name
+  slug: string;              // URL-friendly identifier
+  description: string;       // Short description (1 line)
+  description_long?: string; // Extended description
+  category: string;          // Category slug
+  website: string;           // Official website URL
+  alternatives: string[];    // Foreign apps it replaces
+  pricing: string;           // Pricing model
+  company: string;           // Company name
+  location: string;          // Company location
+  image: string;             // Logo/icon URL
 }
 ```
 
-### 2. Image Load Failures
-```typescript
-onError={(e) => {
-  e.currentTarget.style.display = 'none';
-}}
+### Categories
+- `business` - CRM, ERP, HR, Marketing tools
+- `communication` - Messaging, video calls, collaboration
+- `creative` - Design, video editing, content creation
+- `development` - APIs, cloud, developer tools
+- `e-commerce` - Online stores, marketplaces
+- `education` - Learning platforms, LMS
+- `entertainment` - Streaming, music, social video
+- `finance` - Payments, accounting, fintech
+- `hosting` - Domain, web hosting
+- `productivity` - Office suites, note-taking, calendars
+- `social-networking` - Social media platforms
+- `travel` - Booking, ride-hailing
+- `utilities` - Browsers, file transfer, maps
+
+## Performance Considerations
+
+### Optimization Strategies
+1. **Static Generation**: All pages pre-rendered at build time
+2. **Code Splitting**: Automatic route-based splitting by Next.js
+3. **Memoization**: `useMemo` for expensive computations
+4. **Image Optimization**: External images loaded on-demand
+5. **CSS Modules**: Scoped styles prevent global pollution
+
+### Performance Metrics
+- **Initial Load**: < 2s (depends on network)
+- **Search Response**: < 50ms (client-side filtering)
+- **Page Navigation**: < 100ms (client-side routing)
+
+## Security Considerations
+
+### Current Security Posture
+- **No Authentication**: Public read-only application
+- **No User Input Storage**: All data is static
+- **External Links**: Direct links to app websites (user discretion)
+- **XSS Protection**: React's built-in escaping
+
+### Potential Vulnerabilities
+- **Malicious Links**: App website URLs not validated
+- **Image Loading**: External images could track users
+- **No CSP**: Content Security Policy not configured
+
+### Recommendations for Agents
+- Validate all URLs before adding to apps.ts
+- Consider adding CSP headers in next.config.ts
+- Implement image proxy for privacy
+- Add rel="noopener noreferrer" to external links
+
+## Deployment Architecture
+
+### Vercel Deployment (Recommended)
+```
+GitHub Repository → Vercel Build → CDN Distribution → User Browser
+       ↓
+  Automatic builds on push
+       ↓
+  Static file generation
+       ↓
+  Global CDN deployment
 ```
 
-### 3. Empty Search Results
-```typescript
-{searchFilteredApps.length === 0 ? (
-  <div className={styles.emptyState}>
-    <p>No apps found. Try a different search.</p>
-  </div>
-) : (
-  // Render apps
-)}
-```
+### Build Process
+1. `npm run build` - Next.js production build
+2. Static HTML generation for all routes
+3. JavaScript bundling and minification
+4. CSS extraction and optimization
+5. Asset optimization
 
-## Scalability Considerations
+### Environment Variables
+**Current**: None required
+**Future Considerations**:
+- `NEXT_PUBLIC_ANALYTICS_ID` - Analytics tracking
+- `NEXT_PUBLIC_API_URL` - If backend added
 
-### Current Limitations
-- **Data Size**: 200+ apps manageable, but 1000+ would impact bundle size
-- **Search Performance**: O(n) linear scan acceptable for current size
-- **Memory**: All data loaded in memory (not an issue for static data)
+## Extension Points
 
-### Scaling Strategies
+### Adding New Apps
+1. Add entry to `app/data/apps.ts`
+2. Follow existing schema structure
+3. Ensure slug is unique and URL-friendly
+4. Rebuild and deploy
 
-#### 1. Code Splitting
-```typescript
-const apps = await import('./data/apps');
-```
+### Adding New Categories
+1. Add category to app entries
+2. Update category list in documentation
+3. Consider adding category filtering UI
 
-#### 2. Pagination
-```typescript
-const paginatedApps = apps.slice(page * pageSize, (page + 1) * pageSize);
-```
+### Adding Backend (Future)
+1. Create API routes in `app/api/`
+2. Implement database connection
+3. Add authentication middleware
+4. Update data fetching logic
 
-#### 3. Virtual Scrolling
-For large lists, implement windowing (react-window, react-virtualized).
+## Monitoring and Logging
 
-#### 4. Search Index
-For 1000+ apps, implement client-side search index (Fuse.js, FlexSearch).
+### Current State
+- **No Logging**: Client-side only, no server logs
+- **No Analytics**: No tracking implemented
+- **No Error Tracking**: No error reporting service
+
+### Recommendations
+- Add Vercel Analytics for basic metrics
+- Implement error boundary for React errors
+- Add console logging for debugging
+- Consider Sentry for error tracking
+
+## Testing Strategy
+
+### Current Testing
+- **None**: No automated tests implemented
+
+### Recommended Testing Approach
+1. **Unit Tests**: Test data filtering logic
+2. **Component Tests**: Test search functionality
+3. **E2E Tests**: Test user flows (search → detail)
+4. **Visual Regression**: Test UI consistency
+
+### Testing Tools to Consider
+- Jest + React Testing Library (unit/component)
+- Playwright or Cypress (E2E)
+- Chromatic (visual regression)
